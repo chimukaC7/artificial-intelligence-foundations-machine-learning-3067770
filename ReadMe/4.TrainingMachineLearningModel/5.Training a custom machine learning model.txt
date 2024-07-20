@@ -1,0 +1,57 @@
+Training a custom machine learning model
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Speaker] You've seen multiple examples of training a machine learning model. 
+-Libraries like Scikit-learn do the heavy lifting for you allowing you to spend your time on data preparation. 
+-To predict the cost of homes. We use the XG Boost Learning Algorithm to train a model using the fit function. 
+
+-The fit function starts the training process which iterates over the data to produce the model. 
+-In the log output, you'll see the listing of hyper parameters. This may be slightly confusing because we didn't set hyper parameters when initializing the learning algorithm XGB model. -Since we didn't set the hyper parameters, default values were automatically used. 
+-Learning algorithms have default settings that generally work from most scenarios. 
+-When you train a model using its default parameters, your results will on average be fair but the real game changer is going through a process called hyper parameter tuning. 
+-This is where you experiment with setting hyper parameters until you produce a well-performing model. 
+
+-What's the catch? Not all machine learning algorithms can be tuned, meaning they don't have hyper parameters that you can set to impact training and model performance. 
+-When selecting a learning algorithm, make sure to select one that fits your needs and performs well on your data. 
+-XGBoost is a tunable algorithm. Unlike linear regression with several hyper parameters. 
+
+-To see the hyper parameters available for your learning algorithm, use the get_params function. 
+-The output lists all of the hyper parameters available. You can usually gain a little extra performance by finding the optimum combination to provide the best prediction results. 
+*Good hyper parameter values can be found by trial and error for a given data set. However, there are a few commonly configured hyper parameters for the XGBoost learning algorithm. 
+-As you review these parameters, you're reminded that XGBoost is a decision tree ensemble based model. 
+-The first is n_estimators. This is the number of trees in the ensemble, often increased until no further improvements are seen.
+-This will increase training time and associated costs. The default value is 100. 
+-Next is max depth. The maximum depth of each tree, the values are often between one and 10. I typically experiment with this number until I see improvement. The default value is six. -Next we have learning rate. The learning rate is used to weigh each model often set to small values like 0.3, 0.1, 0.01 or smaller. The default value is 0.3. 
+-Next, we have sub-sample. The number of samples or observations used in each tree set to a value between zero and one. 
+I often use one to include all the samples and the default value is one. 
+-The next one is column sample by tree. This is the number of features or columns used in each tree set to a value between zero and one. I often use one to use all of the features. The default value is one. 
+
+Let's experiment with setting a few hyper parameters. We set them here. Now we can start the training process again and run predictions using the new model. We use the fit function to launch the training process and then we run our predictions here and then we compare the actual values to the predicted values. The next step is to review the R squared metric and here the R squared metric shows a slight improvement from 0.77 to 0.78. I will take it. Now, I challenge you to pause the video, pull down the code and continue to experiment with tuning the hyper parameters. If you get higher than 78%, please let us know by adding a comment in the course Q&A. Now that you understand how to train a model and tune its hyper parameters, let's see the process in action from start to finish.
+
+
+
+
+
+
+
+Learning AI:Certainly! The video “Training a custom machine learning model” focuses on several important aspects of machine learning (ML) model development, particularly around the concept of training a model using the XGBoost algorithm and the importance of hyperparameter tuning. Let's break down the key points for a clearer understanding:
+
+Machine Learning Model Training with XGBoost
+XGBoost Algorithm: This is a highly efficient and flexible algorithm used for supervised learning tasks. It's particularly well-suited for regression, classification, and ranking problems. The video uses XGBoost to predict the cost of homes as an example.
+The Fit Function: This function initiates the training process. It iterates over your data, adjusting the model to minimize errors between predicted and actual values. The 'fit' essentially means the model is learning from the data.
+
+Hyperparameters and Their Tuning
+Hyperparameters: These are the settings you can adjust to optimize your model's learning process. Unlike model parameters that are learned during training, hyperparameters are set before training begins.
+Default Values: If not specified, learning algorithms like XGBoost use default hyperparameter values. While these defaults can provide fair results, custom tuning often yields better performance.
+Hyperparameter Tuning: This involves experimenting with different hyperparameter settings to find the combination that produces the best model performance. It's a crucial step for enhancing your model's accuracy and efficiency.
+
+Practical Example of Hyperparameter Tuning
+Parameters like n_estimators, max_depth, and learning rate: These control aspects of the model such as the number of trees in the ensemble (n_estimators), how deep each tree can grow (max_depth), and the step size at each iteration to prevent overfitting (learning rate).
+Experimentation: By adjusting these hyperparameters, the instructor demonstrates how to refine the model. For instance, increasing n_estimators might improve accuracy but also increase training time and computational cost.
+
+Evaluating Model Performance
+R Squared Metric: After tuning, the model's performance is evaluated using metrics like R squared, which indicates how well the model's predictions match the actual data. An improvement in R squared, even slight, signifies a better model fit.
+
+Application in Your Work
+In your role, understanding and applying these concepts can significantly enhance the predictive models you develop, such as for forecasting demand or optimizing business processes at ZESCO Limited. Experimenting with hyperparameters and using algorithms like XGBoost can lead to more accurate predictions, driving better decision-making and efficiency in your projects.
+
+Remember, machine learning is as much about experimentation and refinement as it is about the initial model building. Don't hesitate to iterate and tune your models for the best outcomes.

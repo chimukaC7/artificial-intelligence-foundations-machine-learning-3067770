@@ -1,0 +1,46 @@
+Identifying a pre-built model
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] When starting a machine learning project, you have two options. 
+-Train a model from scratch using your own data or use a pre-trained model to speed up your development cycle.
+
+-A pre-trained model is a model that was already trained on a large benchmark data set to solve a problem similar to the one you're trying to solve. 
+-Can you think of a reason why you might not want to use your own data? 
+-Oftentimes, obtaining enough data to achieve good performance is a big challenge, especially for individuals and smaller organizations. 
+-If there's a model already on the market that solves your business problem, why not make use of it? 
+-This concept is similar to the paint by number kits for adults. 
+-The heavy lifting is already done for you and all you need to do is fill in the blanks to create a beautiful masterpiece. 
+-You not only save time, but you'll also save money and use a model that has already been tested and proven. 
+-almost always when you're solving an image classification problem, like our flower classification course scenario, you'll use a pre-built model through a process called transfer learning. 
+
+-Transfer learning allows you to add your data on top of a pre-trained model, allowing you to train a new model that inherits the learnings from the previous model. 
+-This is useful because you leverage previous learnings and starting from scratch. 
+-Transfer learning is like inheritance in the Java programming language. 
+-You gain preexisting functionality for reusability and efficiency. 
+
+-I bet your thinking right now, sounds good to me but where can I find pre-trained models and how much will that cost? Both are great questions. 
+-Model Zoo is the most popular catalog of pre-train models available today. 
+-Model Zoo curates pre-trained deep-learning models for various frameworks and domains. 
+-You'll find pre-trained models on computer vision, natural language processing, audio and speech, and more. 
+-Pre-trained models are available for educational purposes, transfer learning, and other uses.
+-Most models are released under the Apache 2 license which means software developers are free to alter the code, copy the original source code, or update the source code. 
+-Additionally, developers can freely distribute any copies or modifications they make.
+
+-There are also pre-trained machine learning models available in the AWS Marketplace. 
+-These pre-trained models are ready to use models that can be quickly deployed on Amazon SageMaker, a fully-managed cloud machine learning platform. 
+-The price range varies for pre-trained models in the AWS marketplace. Some are free while others require a one-time payment. 
+
+-Lastly, Hugging Face, while not a pre-trained model catalog per se, does provide several pre-trained models for natural language processing that not only recognizes words, but understands the meaning and context of those words. 
+-There are pre-trained models for sentiment analysis, question and answer, language translation, texxt summarization, and more. 
+-Of course, you can always train a custom machine learning model from scratch that is more tailored to your specific business needs, and I cannot wait to show you how to do this.
+
+
+
+Here's a breakdown to help you understand better:
+
+Pre-trained Model: This is akin to a template or a foundation that's already been built. Imagine you're constructing a building. Instead of starting from the ground up, you're given a structure that's already several stories high. You can then add your own floors on top. This saves time and resources because the initial heavy lifting is done. In machine learning, pre-trained models have been trained on large datasets to solve problems similar to yours, offering a head start.
+
+Why Use Pre-trained Models? The analogy in the video to “paint by number kits for adults” is spot on. You're filling in the gaps to create your masterpiece, leveraging work that's already been done. This is especially useful if you're working with limited data or want to speed up development. It's cost-effective and leverages proven solutions.
+
+Transfer Learning: This concept is introduced as a way to customize pre-trained models with your data. It's like inheriting properties and behaviors in Java programming. You start with a base (the pre-trained model) and add your unique features on top, benefiting from the learning the model has already undergone. This approach is efficient and can lead to high performance even with relatively small amounts of new data.
+
+Finding Pre-trained Models: The video mentions resources like Model Zoo, AWS Marketplace, and Hugging Face. These platforms offer a variety of pre-trained models for different tasks (e.g., image classification, natural language processing). They range from free to paid options, providing flexibility based on your project needs.

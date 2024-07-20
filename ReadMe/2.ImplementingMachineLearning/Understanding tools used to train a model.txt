@@ -1,0 +1,54 @@
+Understanding tools used to train a model
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Presenter] 
+-What do you do when you can't find a model? While there are pre-trained models on the market, 
+-sometimes those models will not be an exact fit for the problem you're trying to solve. 
+-You'll need to train a custom model when this is the case. 
+
+-Data is a critical element of any machine learning project. 
+-Once you have enough data and the needed compute processing power, you're ready to train a custom model. 
+
+-Machine learning models often need hardware that can support computationally intensive processes; processes like making multiple passes over large data sets to find trends and patterns. 
+-For simple models, training can occur on your local machine using the normal CPU that every laptop has. 
+-However, for more complex training, like our flower classification scenario, GPUs are required for training. 
+-This means training cannot be done on your laptop, so developers often turn to cloud providers like Amazon Web Services, AWS, because you have access to GPUs at the click of a button. 
+
+-The hardware requirements are often dictated by the problem you're trying to solve, your chosen learning algorithm, and selected machine learning framework. 
+-Training a custom model often requires writing code, although there are no code or low code options, which we'll discuss later in the course. 
+-There are several programming language options: R, Python, and Java, with Python being the most popular. 
+-Developers often ask me which language to choose and I recommend Python because it's an easy programming language to learn that can also be used outside of the machine learning domain. 
+
+-Python also has high-quality machine learning and data analysis libraries. In this course, we'll use Python. 
+-The programming language you choose often dictates the frameworks and data analytics and visualization tools you have access to. 
+-The integrated development environment of choice for machine learning in Python is a Jupyter Notebook. 
+
+-Jupyter Notebooks provide a collaborative development environment for writing your Python data analysis, visualization, and training code. 
+-Python-based data analytics tools include the Pandas and NumPy libraries. 
+-Pandas allow you to work with solid data structures, N-dimensional matrices, and perform exploratory data analysis.
+-What I love about Pandas is that it's very easy to read CSV, JSON, and TSV data files into a data frame for processing. 
+-NumPy allows you to do numerical computing. 
+-You'll find that machine learning data is often represented in arrays.
+-So NumPy supports multi-dimensional arrays and matrices. 
+
+-When exploring your data set, you'll need to visualize that data through plotting charts and graphs so you can better understand it. Matplotlib and Seaborn are widely-used, Python-based 2D plotting libraries. 
+-These libraries allow for generating production quality visualizations with just a few lines of code.
+-Machine learning frameworks provide easy-to-use libraries that contain learning algorithms and predefined functions that help you train a model. 
+-There are frameworks like scikit-learn, TensorFlow, MXNet, PyTorch, Keras, and more. 
+-We'll use scikit-learn for training a custom model because it's easy to use and provides extensive documentation with helpful troubleshooting steps.
+-Now that you understand the tools we'll use, Python, Jupyter, scikit-learn, NumPy, Pandas, Matplotlib, let's start preparing our data sets for the machine learning process.
+
+
+
+Imagine you're a chef preparing to cook a complex dish. Here's how the process of training a machine learning model can be likened to cooking:
+
+Gathering Ingredients (Data): Just as you need the right ingredients to start cooking, you need data to train your machine learning model. This data is what the model will learn from.
+
+Kitchen Equipment (Hardware): Depending on what you're cooking, you might need different kitchen tools. For simple dishes, a regular stove might suffice. But for more complex recipes, you might need specialized equipment like a food processor. Similarly, for training machine learning models, simple tasks might only require a basic computer, but more complex models need powerful hardware, like GPUs, which are like high-powered blenders for data.
+
+Recipe Book (Programming Language and Frameworks): Just as you follow a recipe book that's in a language you understand, in machine learning, you use a programming language you're comfortable with. Python is like the “English” of programming languages for machine learning—it's widely used and understood. Frameworks like scikit-learn are like specific recipe styles or techniques that make the cooking process easier, providing you with a set of tools to efficiently prepare your dish.
+
+Preparing and Cooking (Training the Model): This is where you mix your ingredients according to the recipe. In machine learning, this is where you use your data and tools to train the model, teaching it to make decisions or predictions.
+
+Tasting and Adjusting (Evaluating and Improving the Model): After cooking, you taste the dish and adjust the seasoning as needed. Similarly, after training a model, you evaluate its performance and make adjustments to improve it.
+
+Serving the Dish (Using the Model): Finally, just as you serve your dish for others to enjoy, you deploy your trained model to solve real-world problems.

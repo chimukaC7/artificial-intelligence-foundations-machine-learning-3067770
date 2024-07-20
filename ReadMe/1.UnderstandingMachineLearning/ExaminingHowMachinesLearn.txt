@@ -1,0 +1,31 @@
+Examining how machines learn
+
+
+
+
+
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Narrator] There are several ways machines learn, they're called techniques.
+-Three common machine learning techniques are supervised learning, unsupervised learning, and reinforcement learning. Do you recall in the case study video when I mentioned the term supervised learning? Let's start there. 
+
+
+Supervised learning is a technique that trains a machine learning model with labeled data.
+-Labeled data includes known input and output data which teaches the machine to predict future outputs as new data comes in. 
+
+Our case study to predict the cost of homes in California is a good example. The machine is trained on a data set that contains longitude, latitude, age, total rooms, total bedrooms, population, households, median income, ocean proximity, and the value we want the machine to learn how to predict the cost of the home. The machine studies the labeled data to find patterns and learns how to predict home values. This type of supervised learning is considered a regression problem because it is used to predict a number, also called a continuous value in mathematics. Another type of supervised learning we'll discuss solves classification problems. Classification techniques predict discrete responses like yes or no values. They are also great when you have data that needs to be tagged, categorized, or separated into specific groups or classes. Our case study to identify flowers is an example of multi-class label classification because we'll train the model to tag the type of flower found in an image. Another machine learning technique is unsupervised learning. Unsupervised learning doesn't use labeled data like supervised learning, instead it groups, or interprets data based only on input data. Clustering is a common unsupervised learning technique. The hospitality industry often clusters, or segments customers which allows them to tailor their marketing strategy to gain loyal customers and a competitive advantage. The last technique we'll discuss today is reinforcement learning which allows the machine to learn through trial and error. Unlike supervised and unsupervised learning, reinforcement learning does not rely on a defined data set, but operates in a dynamic environment that allows the machine to learn through experience. Reinforcement learning is similar to how you train a dog, with positive and negative reinforcement the dog learns the behavior that will get it the most treats or the most rewards. Robotics heavily relies on reinforcement learning. I'm sure you've heard of the AI programs that beat expert human players in board games, like Go and Chess while reinforcement learning is behind that. Machines learn in a variety of ways. Supervised learning teaches machines through labeled data while unsupervised learning groups and interprets data. Reinforcement learning allows machine to learn through trial and error. With all the ways machines learn they'll soon be smarter than us.
+
+-supervised-teaches machines through labeled data
+-unsupervised-interprets data
+-reinforcement-machines learn through trial and error
+
+
+
+
+
+Absolutely, let's break it down into simpler terms:
+
+Supervised Learning: Imagine you're teaching a child to recognize different fruits by showing them pictures of fruits with their names. Each time you show a picture, you tell the child, “This is an apple,” or “This is a banana.” Over time, the child learns to identify each fruit. In supervised learning, the computer is like the child, and the pictures with names are the labeled data. You're teaching the machine to recognize patterns and make predictions based on examples you've shown it.
+
+Unsupervised Learning: Now, think about putting a bunch of toys into groups without being told what the groups should be. You might group them by color, size, or type of toy without specific instructions. In unsupervised learning, the machine is given data (like the toys) but not told how to group them. It has to figure out on its own how to organize the data into clusters or groups based on similarities.
+
+Reinforcement Learning: Imagine training a dog with treats. If the dog does a trick correctly, it gets a treat. If not, no treat. The dog learns over time which actions lead to treats. Reinforcement learning works similarly for machines. They try different things and learn from feedback what actions lead to rewards (or treats) and which don't. This way, they learn the best strategy to achieve their goal.

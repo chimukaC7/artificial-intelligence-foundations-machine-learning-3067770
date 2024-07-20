@@ -1,0 +1,40 @@
+Examining additional learning algorithms
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] You've learned how to solve classification and regression problems with supervised learning using real world examples. 
+-Machines also learn using another machine learning technique called unsupervised learning. 
+-If you recall, unsupervised learning doesn't use label data to teach the machine. 
+-Instead, it groups or interprets unlabeled data. 
+-This form of machine learning creates the most buzz and excitement, because the machine has to figure things out independently. 
+-This is like teaching my daughter how to write a resume. There are two options. I can either give her examples of resumes to follow, which is like supervised learning, she'll find trends and patterns and use what she's learned to produce a new resume, or I can take an unsupervised learning approach by having her write out all of her prior job experiences, awards, schools, and certifications, and then allow her to use her creativity to self-organize that data based on commonalities. 
+-She may uncover new categories or even revolutionize how we present our story on a resume. 
+
+-Clustering or categorizing is a common unsupervised learning technique. K-means is a clustering algorithm, not to be confused with KNN that groups your data or observations close to the average or mean. 
+-What does this mean? K-means finds commonalities across your dataset and puts each data point into a cluster.
+-All data points in a cluster are homogeneous and heterogeneous from data points in other clusters. 
+-The output of the training process is K number of clusters representing your segmented data. 
+-You can define K by setting it as a hyperparameter before training. 
+-Determining the optimal number for K is critical. 
+-Sometimes you'll have to experiment and other times you can use the elbow method. 
+Take a few moments to write a note in your calendar to do a self-study to learn more about the elbow method. 
+-The hospitality industry often clusters or segments customer data, allowing them to place their customers in distinct groups. Once the groups are identified, marketing is tailored to a specific group. This marketing strategy helps to gain loyal customers and a competitive advantage. 
+-Text classification is another common, unsupervised learning technique that falls under the NLP, or Natural Language Processing, domain. 
+-Text classification is used to categorize, organize, or structure many kinds of text, from complex documents to simple sentences. 
+-Often, a document or sentence is tagged with a category. For example, a phrase is taken as input, and the output is the relevant tag or tags. 
+-Text classification is used to analyze movie or product reviews as good or bad. 
+-Organize support tickets for urgency, review and organize social media posts by sentiment, or classify documents to improve search engine results. 
+
+-Word2Vec is a common learning algorithm used for text classification. It creates word embeddings, which are vectorized representations of text. 
+-Simply put, a single word is transformed into a numerical representation of that word, also called a vector. 
+-This makes it easier to find similarities. 
+-There are several popular implementations of Word2Vec, such as Amazon's Blazing Text algorithm, which is a highly optimized version. 
+
+-There are many learning algorithms designed to solve different types of problems. Now, let's use one to train a custom machine learning model.
+
+
+Here are the key takeaways:
+
+Unsupervised Learning: Unlike supervised learning, unsupervised learning does not rely on labeled data. Instead, it identifies patterns and groups in unlabeled data, showcasing its ability to independently discover new insights.
+
+Clustering with K-means Algorithm: The video highlights K-means, a popular clustering algorithm that groups data points based on commonalities, creating homogeneous clusters. The number of clusters (K) is a critical hyperparameter that can be determined experimentally or through methods like the elbow method.
+
+Text Classification and NLP: It also covers text classification within the domain of Natural Language Processing (NLP), using algorithms like Word2Vec for creating vectorized representations of text. This technique is essential for tasks such as sentiment analysis, categorization of documents, and improving search engine results.

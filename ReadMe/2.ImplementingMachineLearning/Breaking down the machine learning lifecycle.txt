@@ -1,0 +1,77 @@
+Breaking down the machine learning lifecycle
+Selecting transcript lines in this section will navigate to timestamp in the video
+- Do you know the acronym, SDLC? It stands for the Software Development Lifecycle. 
+-It's a standard process that software engineers follow to produce the highest quality code in the shortest amount of time, with Agile being a popular methodology used during the SDLC. 
+
+Just like there's a standard process for software development, there's a machine learning lifecycle with standard stages developers follow to build machine learning systems. 
+Write down the stages, and take some notes as I walk you through them. The stages are 
+
+1.Problem formation and understanding
+2.Data collection and preparation
+3.Model training and testing
+4.Model deployment and maintenance
+
+
+Let's start with problem formation and understanding. 
+-During this stage, you explore the current business processes to identify where machine learning adds value. 
+-Nowadays, everyone is experimenting with machine learning, but not every problem can or should be solved. with machine learning. 
+-During this stage, it's important to ask 
+    -if machine learning is an ethical solution to the problem. 
+-During the stage,
+    -you'll also start to define the inputs and outputs and 
+    -the prediction error rates you'll accept. 
+    
+-No model performs at 100% accuracy. There will be errors, false positives, and false negatives.
+-You'll need to decide upfront what you're willing to accept and what you require from an accuracy perspective. 
+
+During the data collection and preparation stage, 
+-you'll source the needed data. Data is a critical element of any machine learning project. Your project cannot move forward until you have the data you need. 
+    -You may have an internal data store that you can query. (internl data sources)
+    -Your client may provide the data.(provided data) 
+    -An open source or public data store could help,  
+    -or you may need to buy data from a third party. (purchased data)
+
+
+   
+-The data you collect, called raw data, is usually never in a state that a machine can learn from. 
+-The most time in the machine learning lifecycle is spent in the data collection and preparation stage to annotate and wrangle the data. 
+    -Time is spent labeling data, 
+    -removing irrelevant features, 
+    -tossing outliers, 
+    -transforming data, 
+    -imputing missing values. 
+    
+-Once the data is in a state a machine can learn from, you'll split the process data into three subsets, 
+    -training, 
+    -validation, 
+    -testing data. 
+    
+-Typically, you'll reserve 
+    -80% for training, 
+    -10% for validation, and 
+    -10% for testing. 
+    
+-This split is important so that your model can be validated and tested on data it wasn't trained on. 
+
+-After splitting the data, you'll select a machine learning algorithm and point it to your process data to start the training process. 
+-During training, multiple passes are made over the data to produce the model. 
+-You'll iterate during this process, experimenting, fine tuning, and evaluating your model until you land a well-performing model that you place in production during the model deployment and maintenance stage.
+
+-Once your model is in production, you'll set up a cadence for retraining and monitoring overall performance. 
+-The machine learning lifecycle is an iterative process that ensures you build a well-performing model in a timely manner.
+
+
+
+
+
+
+
+
+
+
+
+Machine Learning Lifecycle Stages: The lifecycle includes problem formation and understanding, data collection and preparation, model training and testing, and model deployment and maintenance. Each stage plays a critical role in ensuring the development of effective machine learning systems.
+
+Importance of Data: A significant portion of the lifecycle is dedicated to data collection and preparation. This stage is crucial because the quality and preparation of your data directly impact the performance of your machine learning model.
+
+Iterative Process: The process of training, evaluating, and refining a machine learning model is iterative. This means you'll likely go through multiple cycles of adjustments and testing to achieve a model that meets your accuracy and performance requirements.

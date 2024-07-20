@@ -1,0 +1,22 @@
+Exploring learning algorithms for classification
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Narrator] Let's solve a classification problem using the logistic regression learning algorithm. 
+-If you recall, logistic regression is used for classification problems to predict probability using binary values, like zero or one, true or false, or yes or no, based on a set of independent variables. 
+-The output values lie between zero and one. 
+-The closer the value is to one, the more confident the prediction. 
+-We'll train a public safety model that predicts crime by answering the question will this stop lead to an arrest? 
+
+-The publicly available dataset is comprised of stop-and-search data from the UK. We'll take features from stop-and-search data, like location, gender, age, ethnicity, time of day, and more, to predict whether or not a stop will lead to an arrest. 
+-After processing the raw dataset, imputing missing values using KNN, K Nearest Neighbors, one-hot encoding of categorical data, removing outliers, and combining highly correlated features, we are left with data in a format that a machine can learn from. 
+-In the data, you see outcome, which is the target variable that the machine learns how to predict. The encoded gender, age, date, and ethnicity fields and coordinates. To solve the public safety problem, we'll author our Python code in a Jupyter Notebook using Amazon SageMaker's XGBoost implementation for training. XGBoost stands for eXtreme Gradient Boosting and is a decision-tree-based, machine-learning algorithm. To test the code, I'm using Amazon SageMaker Studio, which provides a Jupyter Notebook environment. Since the code has dependencies on Amazon SageMaker, you'll need to create an AWS account, launch SageMaker Studio, and upload the code to that environment. Let's scroll down and look at the code. When you're creating a learning algorithm, it is called an estimator. To create the estimator, you'll initialize it with the Docker container running the learning algorithm code, the server type, the output path, and you'll use that for training the model and other initialization requirements. The object created is called xgb. Next, you'll set the xgb parameters using the set hyperparameters function. Later in the course, you'll learn how to tune hyperparameters to improve model performance. The fit function starts the training process, which iterates over the data to produce the model. With each epoch or pass over the training data, the output is shown here in the log. The log also shows the auc, or the area under the curve, metric. This metric is often used for binary classification. The higher the auc, the better the model is at distinguishing between the yes, no values. You'll notice that this metric improves as training progresses. The final auc score, let's scroll all the way down to the bottom to see it. The final score is 65%. Once we have a trained model, we'll host it as an endpoint that makes the model available via a URL endpoint. This means a simple API call allows you to add intelligence to any application that wants to integrate public safety. Once the model is hosted, we get a prediction back from it, called an inference, by passing in data here, I'm passing in the data, and getting a response back. And I'm printing out the prediction. In this case, I pass in the expected values, and I receive a probability score back of 0.71, or 71%. This means there is a 71% chance this stop will lead to an arrest. Now that we've covered classification algorithms, let's learn more about regression algorithms.
+
+
+
+
+Here are the key takeaways:
+
+Logistic Regression for Classification: It's used to predict binary outcomes (like yes/no or true/false) based on a set of independent variables. The output is a probability that ranges between 0 and 1, indicating how likely it is that a given input falls into one category or the other.
+
+Practical Application with Public Safety Model: The video illustrates how logistic regression can be applied to real-world problems by creating a model that predicts whether a police stop will lead to an arrest, using data such as location, gender, age, and ethnicity.
+
+Model Training and Evaluation: It walks through the process of preparing data, selecting the logistic regression algorithm, training the model using a dataset, and evaluating its performance using metrics like the area under the curve (AUC). The higher the AUC, the better the model is at distinguishing between the two categories.

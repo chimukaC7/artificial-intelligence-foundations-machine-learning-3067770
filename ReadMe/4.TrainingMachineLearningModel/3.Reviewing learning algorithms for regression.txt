@@ -1,0 +1,38 @@
+Reviewing learning algorithms for regression
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] Do you remember the term regression? 
+-If you recall, regression problems are used to predict numeric values like the cost of a home. 
+-We'll solve a regression problem using three common regression algorithms, 
+    -linear regression, 
+    -RandomForestRegressor, 
+    -XGBoost. 
+    
+-If you're a homeowner, have you wondered what your home will sell for in the current market? 
+-We can train a model to answer the question by taking features of a home to predict what it will sell for.
+    -After processing the raw dataset, 
+    -imputing missing values, 
+    -adding one-hot encoding of categorical data, 
+    -removing outliers, and 
+    -combining highly correlated features, 
+
+we are left with data in a format that a machine can learn from. 
+-In the data, you'll see the median house value, which is the target variable that the machine learns how to predict. 
+-The dataset also includes the housing median age, median income, rooms per household, bedrooms per room, population per household, coordinates, and the ocean proximity. 
+-We'll use Scikit-learns implementation of the linear regression, RandomForestRegressor, and XGBoost learning algorithms. 
+
+-Scikit-learn is a machine learning library that makes it easy to train models with just a few lines of code. 
+-Let's start with linear regression first. We'll need to import the linear regression library from Scikit-learn. Before that, we'll need to split our dataset into the training data and the validation data. In this instance, we are doing a 70-30 split. The 80-20 split is also popular as it gives the model a little more data to learn from during training. Let's scroll back down. Next, we'll create a learning algorithm and store it in reg_model. Then we'll pass in the training data to the fit function to start the training process. Once the training process completes, we'll run the predictions. Now that we've run the predictions on the test data, we'll evaluate the model to see how well it performs when determining the cost of a home. We start by comparing the actual values to the predicted values, and then calculating the R squared metric. R squared represents the amount of variance in the predictions across the dataset. Simply put, it's the difference between the actual versus predicted values. The score for R squared is 0.56 or 56%. We want this number to be closer to one or the model will perform badly on unseen data. Next we'll use the RandomForestRegressor learning algorithm, which is an ensemble of decision trees. The first step is to import the necessary libraries and then initialize the learning algorithm and store it in rf_model. Then we'll pass in the training data to the fit function to start the training process. Once the training process completes, we'll run the predictions. Now that we've run the predictions on the test data, we'll evaluate the model to see how well it performs when determining the cost of a home. The R squared metric is 75%, which turns out to be better than the linear regression model with no major changes, other than the learning algorithm used. Lastly, we'll use XGBoost by using Scikit-learn's wrapper class for it, XGB Regressor. The first step is to import the libraries and then initialize the learning algorithm and store in xgb_model. Then we'll pass in the training data to the fit function to start the training process. Once the training process completes, we'll run the predictions. Now that we've run the predictions on the test data, we'll evaluate the model to see how well it performs when determining the cost of a home. The R squared metric is at 77%, which is slightly better than the RandomForestRegressor model, with no major changes other than the learning algorithm used. 
+
+
+-We've seen that different learning algorithms perform differently on the same dataset. Without varying the configuration or changing the data, XGBoost performs better, which is not surprising. XGBoost generally wins in competitions when going against other regression models. 
+-Now that you understand the popular machine learning algorithms for regression, let's explore additional machine learning algorithms available to you.
+
+
+
+Here are the key takeaways:
+
+Regression Algorithms Overview: It introduces three common regression algorithms: linear regression, RandomForestRegressor, and XGBoost, explaining their application in predicting numeric values like the cost of a home.
+
+Practical Application and Model Training: The video walks through a practical example of predicting home prices using features like median house value, median income, and ocean proximity. It highlights the importance of data preparation, including imputing missing values and encoding categorical data, before training a model.
+
+Model Evaluation Using R Squared Metric: After training, the video discusses evaluating model performance using the R squared metric, which measures the variance in predictions across the dataset. A higher R squared value indicates a model that better fits the data.

@@ -1,0 +1,54 @@
+- [Instructor] 
+
+-Framing your machine learning problem is an important step. 
+-With the resurgence of machine learning, everyone wants to experiment with it because it's causing much buzz in the industry but machine learning is not the solution to every problem and when used incorrectly, it can cause more harm than good. 
+-
+If you can use simple rules, computations or predetermined steps to solve your problem then machine learning is not for you. 
+-Start to think of a problem that you think machine learning could solve and make notes in a text editor or LinkedIn's notebook feature and we'll uncover together whether or not your idea would be a good candidate for machine learning. 
+-I've found that machine learning works best when you need to 
+    -predict an outcome, 
+    -uncover trends and patterns in data, 
+    -have rules and predetermined steps that cannot be coded or your data set is too large to be processed by a human. 
+    
+-Once you've determined that machine learning is a good solution, correctly framing your machine learning problem will ultimately determine if your project succeeds or fails. Framing helps you think through the feasibility and determine the goals and success criteria upfront. 
+
+
+Frame your problem
+-define the questions of your model
+-define the required inputs ndd expected outputs
+
+
+-You'll start by defining the questions you'll ask the model and the required inputs to answer those questions and the expected outputs or predictions. 
+
+-The intended questions often help to drive algorithm selection. 
+-For example, if I'm answering a yes or no question, I'm solving a binary classification problem which means I'll select a learning algorithm that supports binary classification like AWS's linear learner.
+
+-If you are expecting a numeric or continuous value as output, you'll use the open source XGBoost learning algorithm. 
+
+-Once you've landed on an algorithm, the next step is to verify that you have the data required to train the model. 
+-You'll clean and prepare the data at a later step but you can start to identify the relationships between each feature or attribute and how they help you predict the target. For example, to predict what a home will sell for, features like school district, number of bedrooms and age would be better predictors than say, the day of the week or time of day the home sold. 
+
+-During the training process, you can explore the predictive power of features by removing and adding and exploring the impact. 
+
+-Next, consider how the model's output will integrate in your existing applications. 
+-There's no value in developing a machine learning system if the prediction isn't turned into action to help customers. 
+-Let's say your favorite streaming service predicts a movie will get over 10 million views. They'll probably make the decision to cache the movie to improve user experience. 
+
+-Problem framing is also the time to define the metrics that will determine whether or not your implementation is successful.
+-Let's say your favorite real estate website is using machine learning to help home shoppers find a home they love more quickly. 
+-A success metric could be that homes sell 20% faster across the site. 
+-Defining success metrics upfront ensures the team is working toward the same goals. 
+
+-You'll also need to determine the long-term cost and maintenance for running your model in production so that you can budget appropriately. 
+-Machine learning problem framing can often be underestimated, but is an important step during the development of any machine learning system.
+
+
+
+
+emphasizes several critical points for effectively defining machine learning projects:
+
+Machine Learning Suitability: Not every problem is a good fit for machine learning. It's best suited for predicting outcomes, uncovering trends, and when traditional coding rules or steps are insufficient or impractical.
+
+Problem Framing: Correctly framing your machine learning problem is crucial for project success. This involves defining the questions your model needs to answer, the inputs required, and the expected outputs. This step also influences the selection of the learning algorithm based on the nature of the problem (e.g., binary classification, regression).
+
+Data and Integration Considerations: Verifying that you have the necessary data to train your model is essential. Additionally, consider how the model’s output will integrate into existing applications to ensure it translates into actionable insights or improvements.

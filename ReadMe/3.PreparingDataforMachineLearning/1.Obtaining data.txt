@@ -1,0 +1,41 @@
+Obtaining data
+Selecting transcript lines in this section will navigate to timestamp in the video
+- Data is a critical element of any machine learning project. 
+-There are many places from where you can source data. 
+    -You may have an internal datastore you can query, 
+    -your client may provide the data, 
+    -an open-source or public datastore could help, 
+    -or you may need to buy data from a third party. 
+    
+-Do you ever dream about buying a home in California near the ocean? I know I do. If you do, you'll want to study these cost predictions. 
+-We'll use information regarding the demography, like income, population, house occupancy in the districts, the location of the districts, latitude and longitude, and features of the home like number of bedrooms, number of rooms, age of the house. 
+-We'll use that to predict what that home will sell for.
+-We'll use a machine learning technique called supervised learning to predict the cost of the home, which is a linear regression problem. 
+
+-Do you remember the definition of supervised learning from chapter one? If not, let's refresh. 
+-Supervised learning is a type of machine learning where machines are trained using labeled data. 
+-Labeled data is data that already contains the target value the machine needs to learn how to predict. 
+-In this case, the target is the median house value, which is present in the data. Therefore, the machine reviews the other features, also called variables, and learns how to predict the median house value, also called the target. 
+
+-Linear regression is a machine learning algorithm based on supervised learning and is mostly used to find the relationship btn variables for forecasting
+-Regression models often predict a numeric value called the target, in our case, the cost of the home, based on understanding the relationships between independent variables, the features. 
+-Linear regression is mostly used to find the relationship between variables and forecasting. 
+
+
+-Let's take a closer look at the housing data set. 
+-There are several feature variables. First, there's longitude. Longitude is a measure of how far west a house is. A higher value is farther west.
+-Next, we have latitude in this column. It's the measure of how far north a house is. A higher value is farther north.
+-Next, we have the housing median age column. This is the median age of a house within a block. A lower number is a newer building. 
+-Next, we have total rooms. Total rooms is the total number of rooms within a block. 
+-The next column is total bedrooms. It's the total number of bedrooms within a block. 
+-We have population. It is the total number of people residing within a block. And let's scroll over just a little more. In the G column, we have households, and that is the total number of households, essentially a group of people residing within a home unit, for a block. Median income, I'm sure you can guess what that is. It's the median income for households within a block of houses, and it's measured in tens of thousands of US dollars. I'm going to skip over median house value, and let's talk about ocean proximity. This is the location of the house in proximity to the ocean. And now I'm going to go back to median house value because it is the most important feature in this data set. First, the median house value is what that home is worth. Why is this field so important? It's important because it's the target variable. This is the field that we want the machine to learn how to predict. Now let's review the Python code. The first step is to load the data set, and that's what we're doing here using this read_csv function. I'm loading the CSV file data into a Pandas DataFrame. After loading the data, I can now access it through this housing_df, which is the dataframe. Now that we've loaded the data set, we're ready to explore it by generating 2D graphs using Matplotlib and Seaborn.
+
+
+
+ Here are the key takeaways:
+
+Sources of Data: Data can come from various sources, including internal databases, client-provided datasets, open-source or public datastores, or purchased from third parties. The choice depends on your project needs and the availability of relevant data.
+
+Importance of Data in Machine Learning: Data is the foundation of any machine learning project. It's used to train models by identifying patterns and making predictions. The video uses the example of predicting home prices in California to illustrate how different types of data (e.g., demography, house features) are used in a supervised learning context.
+
+Preparing Data: The process involves loading the dataset (using tools like Pandas in Python), exploring it (with visualization tools like Matplotlib and Seaborn), and understanding the role of features and the target variable. In the example given, features include longitude, latitude, and total rooms, while the target variable is the median house value.

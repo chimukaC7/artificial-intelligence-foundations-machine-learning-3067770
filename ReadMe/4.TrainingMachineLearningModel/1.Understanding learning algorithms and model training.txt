@@ -1,0 +1,51 @@
+Understanding learning algorithms and model training
+Selecting transcript lines in this section will navigate to timestamp in the video
+- A machine learning algorithm or learning algorithm for short studies data to find trends and patterns during the training process. During the training process, the machine makes multiple passes or iterations over the training data. 
+
+-These iterations are called epochs. The trends and patterns uncovered by the learning algorithm are stored in a mathematical model or simply called the model. 
+-The number of epochs is a critical parameter called a hyperparameter to the training process that can result in a better performing model. 
+-Typically, a portion of your dataset, 80% is used for training, and the remaining 20% is reserved for evaluating your model's performance after training completes 
+-While training on 80% of the data, a loss function is used to measure how good the model is at predicting the expected value. 
+-In simple terms, loss functions measure how far an estimated value is from its actual value. 
+-The model makes a prediction and can evaluate it because we use labeled data. 
+-Remember, labeled data already has the target or answer you want the machine to learn how to predict. 
+-For example, we include the cost of home in our housing dataset. 
+-Loss functions are mainly used to optimize training, not for an overall judge of performance. 
+
+-After training, your model is evaluated using 20% of the reserve dataset. 
+-We judge the model based on data it hasn't seen before. 
+-Like in the real world, a student's final exam contains questions they've never seen before. 
+-It's the best way to test actual knowledge. 
+-The loss function used during training typically corresponds to an evaluation metric used to judge model performance. 
+
+-Standard evaluation metrics include mean squared error, accuracy, F1 score, AUC, R squared and more. 
+-We'll learn more about standard metrics later in the course. 
+-The metric value is a key indicator of whether or not you need to tweak hyperparameters and start the training process again to improve performance. 
+-You have several learning algorithms to choose from for training. 
+
+-Linear regression solves regression problems and is used to predict numeric values like the cost of a home. 
+-A linear equation establishes a relationship between independent and dependent variables or features by fitting it to a regression line. 
+-Logistic regression is solely used for classification problems, not regression. The name is misleading. 
+-It is used to predict probability using binary values, like zero and one, true or false or yes or no based on a set of independent variables. 
+-The output values lie between zero and one. The closer to one, the better. 
+
+-Decision trees are used for classification and regression problems. Think of them like decision blocks in a flow chart, representing the decision making process which segregates the data based on features into a flow or decision making branch. 
+-A flow is uncovered that produces the best result or prediction.
+-If a branch or feature is deemed irrelevant, it's pruned. 
+-The tree depth can be configured using hyperparameters. 
+-Random Forest is a set or ensemble of decision trees. Each tree is created from a different sample of rows, with each tree making its own prediction. 
+-All the predictions are averaged together into a final result. Now that you know how to select learning algorithms, let's have a closer look.
+
+
+
+
+Here are the key takeaways:
+
+Machine Learning Algorithms: These algorithms study data to find trends and patterns, storing this information in a model. The process involves multiple iterations over the data, known as epochs.
+
+Epochs and Hyperparameters: Epochs are critical to the training process, with the number of epochs being a significant hyperparameter that can influence model performance.
+Training and Evaluation: Typically, 80% of the dataset is used for training, and the remaining 20% is for evaluating the model's performance. This split helps in assessing how well the model can predict on new, unseen data.
+
+Loss Functions: These functions measure the difference between the model's predictions and the actual values, helping to optimize the model during training. They are crucial for understanding how well the model is learning.
+
+Learning Algorithms: The video covers several algorithms, including linear regression for numeric predictions, logistic regression for classification problems, decision trees, and random forests. Each algorithm has its specific use case, such as regression or classification.

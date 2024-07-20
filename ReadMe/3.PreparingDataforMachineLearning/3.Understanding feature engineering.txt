@@ -1,0 +1,53 @@
+Understanding feature engineering
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] 
+
+
+Feature Engineering
+-manipulates data
+-adds,removes and combines Features
+-creates new features
+-all to improve model predictions
+
+-Feature engineering is a process that manipulates your data. 
+    -Adding new features, 
+    -removing highly correlated features and 
+    -combining features to create new features. 
+    
+-All with the goal of improving training in your model's prediction capabilities. 
+-Feature engineering is an art that requires you fully understand your data and the relationships between features. 
+-When we're viewing the data, there are 207 rows where the total bedrooms are missing. We know this to be an error because all homes have at least one bedroom, right? These missing values could skew the model so we'll need to deal with them appropriately. 
+
+-There are several ways to handle missing data. 
+    -Delete rows with missing values, 
+    -use machine learning to predict missing values, 
+    -replace missing values with the mean or the average score, or 
+    -use machine learning algorithms that handle missing data gracefully.
+    
+-We want to view the model data that is most relevant to predicting the median home value target variable with no overlapping features. 
+-You learned that features with very high correlation teach a model similar things. 
+-So they are candidates for removing and even combining. 
+
+-We've identified a strong correlation between total bedrooms to total rooms, population to households and households to total rooms. 
+-The strategy is to create a relatively simple combination of the correlated features and drop the rest. 
+
+-We'll also create a new feature combining longitude and latitude, as there is a negative correlation.
+-Here on this first line, a new feature, which is a ratio of the total rooms to households is created and we call it rooms per household. Next, a new feature, which is a ratio of the total bedrooms to the total rooms is created and we call it bedrooms per room. Next, a new feature, which is a ratio of the population to the households is created, called population per household. And lastly, a new feature that is a combination of the latitude and longitude into one new feature is created, I'm calling it coordinates. After creating the new features, we'll remove the original correlated features, total rooms, households, total bedrooms, population, longitude and latitude. Next, we'll display the new heat map, which shows that the high correlation no longer exists. 
+
+-Most machine learning algorithms can only learn from numeric data, so categorical data, or data represented in string format must be encoded or converted to numeric data. 
+-The only string value we have in our dataset is ocean proximity. 
+-We'll use an encoding technique called one hot encoding to convert the ocean proximity categorical data to numerical data. 
+-One hot encoding creates new binary columns indicating the presence of each possible value from the original data. There are currently five possible values for ocean proximity. Less than one hour away from the ocean, inland, island, near the bay or near the ocean. 
+-We'll have a new column for each possible value and then a value of one in that column, if that's the value or a zero if it's not. 
+-Once we've encoded ocean proximity, we can remove the original columns.
+-One hot encoding can cause high cardinality, which means as the number of features or columns increases, you can experience the curse of dimensionality. We added five new features to our data set and removed one. It's important to remember that as features increase it makes it harder for the model to learn and generalize and can increase your training costs. 
+-Now that you're familiar with feature engineering let's see it in action.
+
+
+-Here are the key takeaways:
+
+Feature Engineering is Essential for Model Accuracy: It involves manipulating your data by adding, removing, or combining features to improve your model's training and prediction capabilities. This process is crucial because it directly impacts the accuracy and efficiency of your machine learning models.
+
+Handling Missing Values and Correlated Features: The video provides strategies for dealing with common data issues, such as missing values and highly correlated features. Techniques include deleting rows with missing values, using machine learning to predict those values, or replacing them with mean/average scores. For correlated features, it suggests combining them into new features or removing some to reduce redundancy.
+
+Creating New Features and Encoding Categorical Data: It also covers the creation of new features from existing ones to better capture the relationships within the data. Additionally, it discusses converting categorical data into a numerical format through one-hot encoding, which is essential for most machine learning algorithms to process the data effectively.
