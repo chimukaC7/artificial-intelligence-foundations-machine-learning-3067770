@@ -1,0 +1,48 @@
+Determining feature importance
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] 
+-Which features from the housing dataset do you think are the most important? 
+-Write down the top three features and why you think they are important to predict the cost of a home, and we'll soon find out if you're right. 
+
+
+-Why are features so important? 
+-Feature importance is the process of finding the most important features to help predict a target. 
+-Each feature or column in your dataset impacts the final prediction. 
+-Some more than others. 
+
+-There are various ways to calculate feature importance today. We'll discuss feature importance for tree-based models. 
+-The overall goal of feature importance is to improve predictions and reduce the training time and overall cost by selecting the top features that have the most impact on the outcome. In our case, the cost of a home. 
+-After you understand feature importance, you retrain the model with the most important features. 
+-This gives you a less complex model to maintain, but more importantly, the results from identifying important features can feed directly into model testing and model explainability. 
+
+-Explainability helps you better understand why your model makes certain predictions and can boost the overall confidence in your model. I bet you're thinking that all sounds great, but how do I determine which features are the most important for training my model? 
+-Some algorithms have feature importance methods inherently built within the model. 
+-Tree-based models produced from Scikit-learn decision tree, random forest, and gradient boosting algorithms have feature importance embedded directly into them. 
+-You'll have direct access to these scores through the feature importances property after training your model. Let's take a look at the code. Here we are using the random forest regressor learning algorithm from the Scikit-learn Library. We trained our models and now we have this attribute available called feature importances that tells you the relevance of the features. You can provide the number here to plot the most important features on a Matplotlib graph. In this case, we've selected six features. This graph shows us that median income is the most important feature when determining what a home will sell for, with population per household and ocean proximity inland close behind. Now that we know this information, we'll retrain the model with only these features. We remove the unneeded features and store the updated values in Train x if. Notice here, it's bedrooms per room, housing median age, coordinates, ocean proximity inland, population per household, and median income. The next step is to create a new RandomForestRegressor object to train the model. And, as always, we call the fit function to start the training process. And then we run the predictions on the test data using the predict function. Once we have our predictions, let's recalculate the root-mean-square error to understand how the predicted results deviate from the actual number. Now, this number is amazing. 57,366. Using only six features provides a similar performance to the previous model where we used all of the features. This means we can reduce the complexity of the model and better explain why our model makes certain predictions. Feature importance is an integral part of model development. Now that you can calculate it and adjust the training process to support it, let's discuss ways to combat bias.
+
+
+
+Feature importance is a key concept in machine learning that helps us identify which features (or inputs) in our dataset have the most influence on the predictions our model makes. Understanding this can significantly impact both the performance and interpretability of your models. Here's a breakdown of the key points from the video on “Determining feature importance”:
+
+What is Feature Importance?
+
+It's a technique used to identify which features in your dataset contribute most significantly to the predictions of your model. In simpler terms, it helps us understand which data points are most important when predicting an outcome.
+
+Why is it Important?
+
+By knowing which features are most important, you can often simplify your models by focusing only on those features, which can lead to faster training times and easier model interpretation without significantly compromising accuracy.
+
+How is it Determined in Tree-Based Models?
+
+Tree-based models like Random Forest and Gradient Boosting inherently calculate feature importance as part of their training process. They do this by looking at how much each feature contributes to reducing uncertainty or “impurity” in the data at each split in the trees. The more a feature decreases impurity, the more important it is considered.
+
+After training, you can access a model's feature importances through a specific attribute (e.g., feature_importances_ in Scikit-learn). This gives you a score for each feature, indicating its importance.
+
+Practical Application:
+
+The video demonstrates using the Random Forest algorithm to identify important features in predicting housing prices. Median income, population per household, and ocean proximity were found to be top features.
+
+With this knowledge, the model was retrained using only these top features, which simplified the model and maintained performance. This approach not only makes the model faster and easier to maintain but also enhances explainability. You can more easily explain why your model makes certain predictions because you're focusing on the most impactful features.
+
+
+In your journey towards becoming a Machine Learning Engineer, understanding and applying feature importance will be invaluable, especially when working on projects where model performance and explainability are critical. It allows you to create efficient, effective, and interpretable models, a key skill in the field.

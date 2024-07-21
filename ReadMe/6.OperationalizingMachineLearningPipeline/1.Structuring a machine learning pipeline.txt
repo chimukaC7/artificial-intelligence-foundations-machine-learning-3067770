@@ -1,0 +1,60 @@
+Structuring a machine learning pipeline
+Selecting transcript lines in this section will navigate to timestamp in the video
+- Have you ever pressed Shift+Enter or Run Cell inside of your Jupyter Notebook and thought to yourself, there has to be an easier and repeatable way to do this? Well, you would be right. And the answer you're looking for is called a pipeline. 
+
+-The data collection and preparation phase of machine learning consists of many steps, 
+    -imputing missing data, 
+    -handling outliers, 
+    -understanding correlations,
+    -feature engineering, 
+    -encoding,
+    -algorithm experimentation, and more. 
+    
+-When training a model to predict the cost of homes, we did each step individually, and sometimes even repeated steps when experimenting with a different learning algorithm on the same dataset. Can you imagine supporting a production machine learning system this way? You'd want to use pipelines instead. 
+
+-Pipelines allow you to assemble all the steps of your machine learning workflow together. 
+-This assembly helps to streamline the workflow by grouping and automating our data preparation, training, evaluation, tuning, and deployment steps. 
+
+-There are many benefits to incorporating pipelines into your process. 
+-First, pipelines allow you to encapsulate your code for easy reuse. 
+-During the process of training a model to predict the cost of homes, we experimented with multiple learning algorithms, Linear Regression, RandomForestRegressor, and XGBoost to identify which one would perform better on our data set. 
+-We called the fit function multiple times and executed each code block independently.
+-With Pipelines, we can fit and predict only once on the data to fit an entire sequence of estimators. 
+
+-Pipelines add a level of convenience, reproducibility, and a way to enforce your data preparation steps across all iterations of model training. 
+-Pipelines can also speed up your training process, giving you a faster time to market by running certain steps in parallel. 
+-They also help with iterative hyper parameter tuning. There are many benefits. I see why pipelines are in high demand in the industry.
+
+-Scikit-learn's pipeline class provides the structure to organize the sequence of steps we need to execute to train a model. 
+-First, let's look at the normal machine learning code. We trained multiple models. First, we used linear regression to train a model. We ran the predictions, we evaluated the model. We looked at the R-squared metric, and then we did something similar for RandomForestRegressor. We trained the model, we ran the predictions, and we did the evaluation. And lastly, we used XGBoost. We trained the model, ran the predictions, evaluated the model. That's the code we used. Now let's look at how the code is updated to implement a pipeline. This is the code that we use to train the model in parallel using a pipeline. Look at that. Look at how much more efficient the code is. And when you see the code in action, you'll see how much faster the training process becomes because we can execute three training jobs in parallel. Pipelines help you build quick and efficient machine learning models. Pipelines are quickly gaining popularity in the industry, and we can see why. Automating this process saves time and reduces redundant pre-processing work while organizing your code to be more efficient. Now, let's see pipelines in action.
+
+
+
+Absolutely, let's break down the concept of structuring a machine learning pipeline as discussed in the “Structuring a machine learning pipeline” video.
+
+Machine Learning Pipeline - Overview:
+A machine learning pipeline is essentially a systematic way of organizing the steps involved in developing a machine learning model. It's like an assembly line in a factory where each step is connected and the output of one step becomes the input for the next. This ensures a smooth flow from data collection, preprocessing, model training, evaluation, and finally to making predictions.
+
+Key Components of a Machine Learning Pipeline:
+
+Data Collection and Preparation: This involves gathering the data you need and getting it ready for analysis. It includes cleaning the data, dealing with missing values, and feature engineering. Imagine you're cooking a meal, and this step is akin to preparing your ingredients before you start cooking.
+
+Model Training: Here, you select an algorithm and use your prepared data to train a model. This is like following a recipe to cook your meal with the ingredients you prepared earlier.
+
+Evaluation: Once the model is trained, you evaluate its performance using certain metrics. This step is similar to tasting your cooking to see if it needs any adjustments.
+
+Prediction: Finally, the trained model is used to make predictions on new data. It's like serving your cooked meal to guests.
+
+
+Benefits of Using a Pipeline:
+
+Efficiency and Convenience: By automating the workflow, pipelines save time and make the process more efficient. You don't have to manually repeat steps for different models or datasets.
+Reproducibility: Pipelines ensure that the same steps are followed every time, making your work reproducible. This is crucial in a professional setting where consistency is key.
+Parallel Processing: Some pipelines allow for steps to be run in parallel, speeding up the process even further.
+
+Practical Example:
+The video uses the example of training models to predict the cost of homes. Initially, each step (like imputing missing data, handling outliers, and training models) is done individually, which can be repetitive and time-consuming. By using a pipeline, these steps are streamlined. You can fit and predict on the data just once, and the pipeline takes care of executing all the necessary steps in order. This not only makes the process quicker but also ensures that the same preprocessing steps are applied in training and prediction phases, which is crucial for model performance.
+
+In summary, structuring a machine learning pipeline is about creating an efficient, reproducible, and systematic workflow for developing and deploying machine learning models. It's a best practice that can significantly enhance the quality and efficiency of your machine learning projects.
+
+

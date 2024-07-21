@@ -1,0 +1,57 @@
+- [Instructor] What if we only trained our flower image classification model on images of roses and tulips? 
+
+-What would the model learn from that data? What would we be teaching it? 
+-What do you think would happen if we asked the model to identify a picture of an orchid? 
+
+-These are all great questions for illustrating and discussing bias in machine learning, and the specific ways to combat it.
+-To answer those questions, we would be teaching the model that there are only two flowers in the world, roses and tulips. 
+-By excluding pictures of other types of flowers, the model would learn that flowers like dandelions, sunflowers, and daisies either don't exist or unimportant. 
+-The model would be biased toward roses and tulips, meaning it will always predict a flower to be a rose or a tulip. 
+
+-While this is a simple example, bias that determines whether or not someone will get that small business loan or parole makes the stakes much higher. 
+-Bias is a huge impediment to realizing the promise of this life-changing technology.
+-Bias surfaces when predictions made by a model are less favorable to an individual or group, when there's no relevant difference between the group that justifies the prediction.
+-Bias surfaces throughout the machine learning lifecycle and can be mitigated if you know what to look for and the questions to ask. 
+
+-Bias can appear in your data, selected algorithm, or model. 
+
+-Bias shows up in your data if your dataset is imbalanced or doesn't accurately represent the environment the model will be deployed in. 
+-In our case, training the model on only two flower species when there are many more in the world causes bias. Outliers and abnormalities in your data can also skew the model and should be handled before training. 
+-For example, an image of a flower that is blurry or distorted could confuse the learning algorithm, producing a model that doesn't perform well.
+-When dealing with data, it's important to pair engineers with subject matter experts or SMEs, so problems can be quickly found early on. 
+
+-Bias can also show up in your selected algorithm. We experimented with various algorithms to select the one that performed the best. 
+-We saw that XGBoost out-of-the-box outperformed other regression algorithms. 
+-You'll need to understand the capabilities of your selected learning algorithm. Is it configurable or not? And how well it fits the problem you're trying to solve. 
+
+-Bias can also show up in your model. Once models are in production, they have a tendency to drift. 
+-Drift indicates that the relationship between the target variable and the other variables changes over time. 
+-Due to this drift, the model becomes unstable and the predictive power continues to degrade over time. 
+-To handle drift in the data, weighting features can be a good option. 
+-This is where you call out important features so the model doesn't vary on those. While bias is a cause for concern, there are proven ways to mitigate it. Now that you are aware of how to handle bias, let's look at optimizing a machine learning pipeline.
+
+
+
+Certainly! Let's dive deeper into the topic of combating bias in machine learning, as covered in the “Combating bias” video.
+
+Understanding Bias in Machine Learning:
+Bias in machine learning occurs when a model makes predictions that are systematically prejudiced due to incorrect assumptions in the learning process. Imagine teaching a child to recognize only apples and bananas and then asking them to identify a mango. The child, not knowing about mangoes, might incorrectly categorize it as either an apple or a banana. Similarly, if a machine learning model is trained only on certain types of data (like images of roses and tulips), it will struggle to correctly identify or give importance to other types (like an orchid).
+
+Sources of Bias:
+
+Data Bias: This happens when the training data is not representative of the real-world scenario the model will be deployed in. Using the flower example from the video, training a model only on roses and tulips will make it biased towards these flowers, ignoring the existence or importance of others.
+Algorithm Bias: Sometimes, the choice of algorithm itself can introduce bias. Certain algorithms might perform better for specific types of data or problems but might not be as effective or fair for others.
+Model Bias: Over time, as the model is exposed to new data, there's a risk of 'drift' where the model's accuracy degrades because the relationship between input data and predictions changes. This can further entrench bias if not monitored and corrected.
+
+Combating Bias:
+
+1.Diverse Data: 
+-Ensure your dataset is diverse and representative of all possible scenarios. This might involve including images of many different types of flowers, not just roses and tulips.
+2.Collaboration: 
+-Pairing engineers with subject matter experts can help identify and mitigate potential biases early in the development process.
+3.Algorithm Selection and Tuning: 
+-Experiment with different algorithms and configurations to find the one that performs best in a fair and unbiased manner.
+4.Continuous Monitoring: 
+-Even after deployment, continuously monitor the model for signs of drift or bias and adjust as necessary.
+
+By understanding and addressing these aspects, you can significantly reduce bias in your machine learning models, making them more fair, accurate, and representative of the diverse world they operate in. This is crucial in your path towards becoming a Machine Learning Engineer, as it ensures the technology you develop is ethical and inclusive.

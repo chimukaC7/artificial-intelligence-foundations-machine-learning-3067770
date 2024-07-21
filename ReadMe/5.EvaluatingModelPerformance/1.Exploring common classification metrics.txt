@@ -1,0 +1,58 @@
+Exploring common classification metrics
+Selecting transcript lines in this section will navigate to timestamp in the video
+- I promised you that we'd explore metrics in detail later on in the course. So here we are. 
+
+-Metrics are key indicators of whether or not your model is well performing, or whether you'll need to tweak the hyperparameters to continue your training iterations.
+- We'll cover several metrics today that are reserved for classification problems: accuracy, F1 score, precision, recall, and AUC. Let's talk about them now. 
+
+-Accuracy, also known as classification accuracy, indicates the prediction capabilities of your model or the fraction of the total predictions that were correct. 
+-The formula for accuracy is simple. 
+-Accuracy equals the number of correct predictions divided by the total number of predictions.
+-For binary classification, accuracy is also calculated using true positives, true negatives, false positives, and false negatives. 
+-The formula is accuracy equals true positive plus true negative divided by true positive plus true negative plus false positive plus false negative. 
+-When considering our public safety model, a true positive is where the model predicts the stop will lead to an arrest, and the stop really does lead to an arrest. A true negative is where the model predicts the stop will not lead to an arrest and it actually doesn't. False positive is where the model predicts the stop will lead to an arrest, but it actually doesn't.
+- A false negative is where the model predicts the stop will not lead to an arrest, but it actually does.
+
+ -I do want to highlight that when your dataset is highly imbalanced, accuracy is not a good way to measure your model's performance. 
+ 
+ -Instead, consider using precision, recall, or F1 score, which we'll discuss now. 
+ -Precision is another way to measure accuracy. 
+ -Precision quantifies the number of positive predictions that actually belong to the positive class. 
+ -The formula is simple.
+ -Precision equals true positive divided by true positive plus false positive. Use this metric for accuracy when you want fewer false positives. 
+ -For example, for spam filtering, you don't want spam emails in your inbox, but you don't want to miss out on important emails. In this case, a false positive will flag an email a spam when it isn't, which means you may miss it if you don't regularly check your spam folder. 
+ 
+ -Recall is another way to measure accuracy and highlights the sensitivity of your model. 
+ -Recall quantifies the number of positive predictions made out of all the actual positives in the dataset. 
+ -The formula is recall equals true positive divided by true positive plus false negative. 
+ -Consider the recall metric when false positives are okay and you want fewer false negatives. 
+ -Let's say you're dealing with anomaly detection to stop credit card fraud. You're okay if an activity is marked as fraud when it's really not. The worst case scenario here would be a fraudulent transaction that's allowed. 
+ -While this may cause some level of inconvenience for the credit card owner, it's better that their account is protected.
+ 
+ -F1 score is yet another way to measure accuracy and is a combination of precision and recall, providing a single score. 
+ -The formula is F1 equals two times precision times recall divided by precision plus recall. 
+ -The F1 score works well for imbalanced data. 
+ 
+ 
+ -The last metric is AUC, or area under the ROC curve, which measures accuracy and visualizes how well predictions are ranked across the true positive and false positive rates. 
+ -If you care about false positives, then you'd optimize on AUC. There are additional classification metrics that we didn't cover today. 
+ -Write down a to-do to research additional classification metrics that could be useful to your use case. 
+ -Now that you can identify and tune classification metrics available to you, let's explore regression metrics.
+
+
+
+
+Certainly! The video you're watching, “Exploring common classification metrics,” covers several important metrics used to evaluate the performance of machine learning models in classification tasks. Let's break them down:
+
+Accuracy: This is the simplest metric, representing the percentage of correct predictions made by the model out of all predictions. Think of it as answering the question, “Out of all the predictions made, how many did the model get right?” However, it's important to note that accuracy might not be reliable if your data is imbalanced (i.e., when one class is much more frequent than others).
+
+Precision: Precision focuses on the positive predictions and answers the question, “Of all the instances the model labeled as positive, how many are actually positive?” This is crucial when the cost of a false positive (incorrectly labeling a negative instance as positive) is high. For example, in email spam detection, precision ensures that non-spam emails are not incorrectly marked as spam.
+
+Recall: Also known as sensitivity, recall measures how well the model can identify positive instances. It answers, “Of all the actual positive instances, how many did the model correctly identify?” High recall is vital in situations where missing a positive instance is costly, such as in fraud detection.
+
+F1 Score: The F1 score combines precision and recall into a single metric by taking their harmonic mean. It's particularly useful when you need a balance between precision and recall, and it's effective for evaluating models on imbalanced datasets.
+
+AUC (Area Under the ROC Curve): This metric evaluates the model's ability to distinguish between classes. A higher AUC indicates a better model performance, especially in distinguishing between positive and negative instances. It's especially useful when you're concerned about the trade-off between true positive rate and false positive rate.
+
+
+Each of these metrics provides a different perspective on the model's performance, and choosing the right one depends on the specific requirements of your project. For instance, in your work with software design and development, focusing on precision might be more important when implementing features that require high accuracy without many false positives, such as user authentication systems.

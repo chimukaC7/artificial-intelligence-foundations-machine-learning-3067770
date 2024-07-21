@@ -1,0 +1,25 @@
+Understanding the confusion matrix
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] Whenever I explain a confusion matrix, I jokingly say that a confusion matrix tells you how confused your model is. That is somewhat true because the confusion matrix evaluates the accuracy of your model. However, the confusion matrix is not a metric. 
+-
+It's a table that shows a summary of the prediction results for a classification model. The number of incorrect and correct predictions is summarized with count values and broken down by each class. 
+-This is an important tool that gives insight into the types of errors being made by your model. 
+-You'll notice the confusion matrix is a two by two matrix that shows four possible outcomes, true positive, false positive, false negative, and true negative.
+
+-In a real confusion matrix, the count of each outcome appears in a box. 
+-If you recall, a true positive is where the model correctly predicts the positive class or true value. 
+-Similarly, a true negative is where the model correctly predicts the negative class or the false value. 
+
+-A false positive is where the model incorrectly predicts the positive class, and a false negative is where the model incorrectly predicts the negative class. 
+-These values help you determine metrics we've discussed before, like accuracy, precision, recall, and F1 score. 
+-Let's review the Python code to produce a confusion matrix for our public safety crime prediction model. Here is the confusion matrix. The output shows the true positives at 0,0, the false positives at 0,1, the false negatives at 1,0, and the true negatives at 1,1. Here, the true positive is 51,492, the true negative, 102,583, the false positives, 64,021, and the false negatives, 33,720. A visual representation of the confusion matrix is also helpful. Here is the code that we can use to display a visual representation. Makes it much easier to understand. Well, how do you interpret these results? We'll use these values to calculate accuracy, recall, precision, and the F1 score. The Scikit-learn library also calculates these metrics for you using the classification report function. After we run the predictions, you'll see the metrics down here for precision, recall, F1 score, and accuracy. Accuracy ends up being 61%. Precision ends up being 45%. Recall ends up being 60%. And F1 score ends up being 51%. While our example only shows two class values, true or false, a confusion matrix can easily be applied to problems with three or more class values by adding more rows and columns to the confusion matrix. Now that you understand the confusion matrix and how it's used to understand the accuracy of classification models, let's look at metrics used to evaluate regression models.
+
+
+magine you're playing a guessing game where you try to guess if an item in a box is a toy or not. After each guess, you check to see if you were right. The confusion matrix is like a scorecard for this game, showing how well you guessed.
+
+True Positives (TP): When you guess an item is a toy, and it really is a toy, it's like getting a point for a correct guess.
+True Negatives (TN): When you guess an item is not a toy, and it's not, you get another point for being right.
+False Positives (FP): If you guess an item is a toy but it's not, it's like losing a point because you were too eager.
+False Negatives (FN): If you guess an item is not a toy but it is, it's like missing out on a point because you were too cautious.
+
+The confusion matrix helps us see not just when we're right or wrong, but how we're right or wrong. Are we too eager or too cautious? In your work, understanding this can help improve how software makes decisions, like distinguishing between different types of web traffic or user behavior.

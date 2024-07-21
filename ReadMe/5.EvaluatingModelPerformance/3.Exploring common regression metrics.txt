@@ -1,0 +1,36 @@
+Exploring common regression metrics
+Selecting transcript lines in this section will navigate to timestamp in the video
+- [Instructor] 
+-Metrics are key indicators of whether or not your model is well performing, or whether you'll need to tweak the hyperparameters to continue your training iterations. 
+
+Today, we'll cover several metrics reserved for regression problems. R squared, mean squared error, root mean square error, and mean absolute error. Let's talk about them now.
+
+
+-We've used R squared throughout the course to evaluate our home cost predicting model. If you recall, 
+-R squared calculates the difference between the actual values and the predictions made by the model. 
+-The distances between the actual and predicted values are called residuals. 
+-Residuals are key to determining the performance of a regression model. 
+-R squared values land between zero to one. 
+-Values closer to one indicate a model that has a better fit between predicted and actual values. 
+-R squared is more of a relative measure, while mean square error and root mean square error are absolute measures. 
+-Means square error, or MSE, is an absolute number of how much your predicted results deviate from the actual number. 
+-Root means square error, or RMSE, is the square root of MSE, making MSE easier to interpret. 
+
+-Mean absolute error, or MAE, is much like mean square error, however, mean absolute error is a more direct representation of the sum of error predictions. 
+-It takes the sum of the absolute value of errors. 
+-Simply put, it's the sum of all the differences between the actual and predicted values, divided by the total number of predictions in the dataset.
+
+-You'll use mean absolute error when you want to know how close the predictions are to the actual values on average. 
+-Let's calculate these metrics for the home predicting model and interpret what these metrics tell us about our model. The R squared score function is used to calculate R squared. You'll pass in the actual values stored in Y test and the predicted values stored in y_xgb_pred_test. When we calculate the score, we see it lands right at 77%, which means the model is correct or accurate 77% of the time. We'd want this number to be higher before deploying this model to production. Now let's look at the mean absolute error. You'll pass in the actual and predicted values. Let's scroll down here. Here's the mean absolute error. We're using this mean absolute error function and notice the number comes to 36,584. How do you interpret the score? Both the mean absolute error and the root mean square error range from zero to infinity. Lower mean absolute error values indicate that the model is correctly predicting, while larger mean absolute error values indicate the model has poor predicting capabilities. Mean square error and root mean squared error are up next. Again, we're passing in the actual, right here, and predicted values. Root means square error helps to determine if there are any large errors in your model. Did your model predict many values that were significantly higher or lower than the actual values? The root mean square error score will tell you that. First we'll need to determine the mean square error, and that's what we do here, using this mean squared error function. First, we'll need to determine that and then we can calculate the root mean square error using this mean squared error function. We have our values here at the bottom. The first is the mean square error and the second is the root mean square error. We can see that the root mean squared error value is larger than the mean absolute value. This means that there are some large errors in the dataset, which is in line with the need to improve the accuracy which landed at 77%. We'll need to improve that accuracy before deploying the model. Now that you understand how to evaluate regression metrics using R squared, mean absolute error, mean squared error, and root mean square error, let's move on to feature importance.
+
+
+
+Certainly! Let's break down the common regression metrics mentioned in the video to help you understand them better:
+
+R squared (R²): Think of R squared as a measure of how close the data are to the fitted regression line. It's like a grading system for the model's prediction accuracy, where a score of 1 means perfect predictions and a score closer to 0 means the model doesn't explain the variability of the data well. If you were shooting arrows at a target, a higher R² would mean most of your arrows are hitting close to the bullseye.
+
+Mean Squared Error (MSE): This metric tells us how far off our predictions are, on average, from the actual values. It does this by taking the differences between each predicted value and the actual value, squaring them (which makes all the differences positive and emphasizes larger errors), and then averaging those squared differences. Imagine you're throwing darts at a board, and MSE calculates the average of the squared distances from each dart to the bullseye.
+
+Root Mean Square Error (RMSE): RMSE is simply the square root of MSE. Taking the square root brings the scale back to the original units of the data, making it easier to interpret. Following the dart analogy, if MSE calculated the average squared distance of each dart from the bullseye, RMSE would be like measuring the straight-line distance from each dart to the bullseye and then finding the average.
+
+Mean Absolute Error (MAE): MAE measures the average magnitude of errors in a set of predictions, without considering their direction. It's the average of the absolute differences between the predicted values and actual values. This metric gives you a straightforward measure of how wrong the predictions were, on average. Using the dart analogy again, MAE would measure the distance of each dart from the bullseye, ignoring whether the darts are to the left, right, above, or below the target, and then calculate the average distance.
